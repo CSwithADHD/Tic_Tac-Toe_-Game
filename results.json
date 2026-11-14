@@ -1,0 +1,50 @@
+{
+  "dfs/random": {
+    "win": 1,
+    "draw": 0,
+    "loss": 0,
+    "games": 1,
+    "nodes_total": 557008,
+    "nodes_per_ai_move": 185669.3
+  },
+  "dfs/human": {
+    "win": 1,
+    "draw": 0,
+    "loss": 0,
+    "games": 1,
+    "nodes_total": 557245,
+    "nodes_per_ai_move": 139311.2
+  },
+  "dfs/perfect": {
+    "win": 0,
+    "draw": 1,
+    "loss": 0,
+    "games": 1,
+    "nodes_total": 556772,
+    "nodes_per_ai_move": 111354.4
+  },
+  "heuristic/random": {
+    "win": 1,
+    "draw": 0,
+    "loss": 0,
+    "games": 1,
+    "nodes_total": 3923,
+    "nodes_per_ai_move": 1307.7
+  },
+  "heuristic/human": {
+    "win": 1,
+    "draw": 0,
+    "loss": 0,
+    "games": 1,
+    "nodes_total": 4016,
+    "nodes_per_ai_move": 1004.0
+  },
+  "heuristic/perfect": {
+    "win": 0,
+    "draw": 1,
+    "loss": 0,
+    "games": 1,
+    "nodes_total": 3906,
+    "nodes_per_ai_move": 781.2
+  }
+}

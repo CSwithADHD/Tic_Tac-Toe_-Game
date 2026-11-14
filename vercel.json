@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/api/play", "destination": "/api/index" },
+    { "source": "/", "destination": "/static/index.html" },
+    { "source": "/index.html", "destination": "/static/index.html" },
+    { "source": "/style.css", "destination": "/static/style.css" },
+    { "source": "/app.js", "destination": "/static/app.js" }
+  ]
+}

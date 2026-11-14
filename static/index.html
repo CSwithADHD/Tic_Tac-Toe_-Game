@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic-Tac-Toe Agent</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Tic-Tac-Toe Agent</h1>
+    <p>An AI that looks ahead with depth-first search and scores positions with a heuristic.</p>
+  </header>
+
+  <main class="layout">
+    <section class="play" aria-label="Game">
+      <p id="status" class="status" role="status" aria-live="polite">Starting…</p>
+
+      <div id="board" class="board" role="grid" aria-label="Tic-Tac-Toe board"></div>
+
+      <div class="score" aria-label="Scoreboard">
+        <div><span id="score-you">0</span> you</div>
+        <div><span id="score-draw">0</span> draws</div>
+        <div><span id="score-ai">0</span> AI</div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="panel" aria-label="Game settings">
+        <h2>Settings</h2>
+
+        <fieldset>
+          <legend>Who goes first</legend>
+          <label><input type="radio" name="first" value="ai" checked> AI (you play O)</label>
+          <label><input type="radio" name="first" value="you"> You (you play X)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Search method</legend>
+          <label><input type="radio" name="mode" value="heuristic" checked> DFS + heuristic</label>
+          <label><input type="radio" name="mode" value="dfs"> DFS only</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Look-ahead</legend>
+          <label><input type="radio" name="depth" value="2"> Easy (2 moves)</label>
+          <label><input type="radio" name="depth" value="4"> Medium (4 moves)</label>
+          <label><input type="radio" name="depth" value="9" checked> Hard (whole game)</label>
+        </fieldset>
+
+        <button id="new-game" class="btn" type="button">New game</button>
+      </section>
+
+      <section class="panel" aria-label="What the AI did">
+        <h2>Last AI move</h2>
+        <p id="reason" class="reason">The AI has not moved yet.</p>
+
+        <div class="facts">
+          <div><b id="nodes">–</b><span>positions searched</span></div>
+          <div><b id="time">–</b><span>milliseconds</span></div>
+        </div>
+
+        <p class="mini-title">Score of each square it considered</p>
+        <div id="mini" class="mini" aria-label="Scores for each square"></div>
+        <p class="hint">Higher is better for the AI. 10 or more means a forced win; −10 or less a forced loss.</p>
+      </section>
+    </aside>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
